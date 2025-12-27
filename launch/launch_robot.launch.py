@@ -40,7 +40,7 @@ def generate_launch_description():
             package="twist_mux",
             executable="twist_mux",
             parameters=[twist_mux_params],
-            remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
+            remappings=[('/cmd_vel_out','/cmd_vel_unstamped')]
         )
 
     
@@ -62,7 +62,7 @@ def generate_launch_description():
     diff_drive_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["diff_cont"],
+        arguments=["diff_controller"],
     )
 
     delayed_diff_drive_spawner = RegisterEventHandler(
