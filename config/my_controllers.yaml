@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 30
+    update_rate: 10
     # use_sim_time: true
 
     diff_cont:
@@ -12,14 +12,20 @@ controller_manager:
 diff_cont:
   ros__parameters:
 
-    publish_rate: 50.0
+    publish_rate: 10.0
 
     base_frame_id: base_link
+    
+    odom_frame_id: odom
+    enable_odom_tf: true
+    odom_topic: /odom
 
     left_wheel_names: ['left_wheel_joint']
     right_wheel_names: ['right_wheel_joint']
-    wheel_separation: 0.297
-    wheel_radius: 0.033
+    wheels_per_side: 1
+
+    wheel_separation: 0.125
+    wheel_radius: 0.0195
 
     use_stamped_vel: false
 
