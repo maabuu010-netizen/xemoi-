@@ -17,6 +17,7 @@ def generate_launch_description():
                 'frame_id': 'laser_frame',
                 'angle_compensate': True,
                 'scan_mode': 'Standard',
+                'scan_frequency': 7.0,
             }]
         )
     ])
